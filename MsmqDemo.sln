@@ -3,6 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Web", "MsmqDemo.Web\MsmqDemo.Web.csproj", "{70B5BEDD-D09A-4B3B-9C12-5F7D9191EDDB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{5BF108C8-5D1F-4D12-9F1B-BCE6F4000697}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9E626520-28D3-4CAE-AD3B-A1911181B37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Services.Shared", "MsmqDemo.Services.Shared\MsmqDemo.Services.Shared.csproj", "{BC048BD2-7075-4B53-8CE7-28EF17312989}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{284574B1-3392-4671-9EB4-746C55F0B872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Services", "MsmqDemo.Services\MsmqDemo.Services.csproj", "{14F60C40-2FE4-4347-8811-972239F17DBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Services.ConsoleHost", "MsmqDemo.Services.ConsoleHost\MsmqDemo.Services.ConsoleHost.csproj", "{E0D12BF7-C5E4-408A-A41D-4F33619F827A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +25,26 @@ Global
 		{70B5BEDD-D09A-4B3B-9C12-5F7D9191EDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B5BEDD-D09A-4B3B-9C12-5F7D9191EDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B5BEDD-D09A-4B3B-9C12-5F7D9191EDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC048BD2-7075-4B53-8CE7-28EF17312989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC048BD2-7075-4B53-8CE7-28EF17312989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC048BD2-7075-4B53-8CE7-28EF17312989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC048BD2-7075-4B53-8CE7-28EF17312989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F60C40-2FE4-4347-8811-972239F17DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F60C40-2FE4-4347-8811-972239F17DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F60C40-2FE4-4347-8811-972239F17DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F60C40-2FE4-4347-8811-972239F17DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{70B5BEDD-D09A-4B3B-9C12-5F7D9191EDDB} = {5BF108C8-5D1F-4D12-9F1B-BCE6F4000697}
+		{BC048BD2-7075-4B53-8CE7-28EF17312989} = {9E626520-28D3-4CAE-AD3B-A1911181B37F}
+		{14F60C40-2FE4-4347-8811-972239F17DBE} = {284574B1-3392-4671-9EB4-746C55F0B872}
+		{E0D12BF7-C5E4-408A-A41D-4F33619F827A} = {284574B1-3392-4671-9EB4-746C55F0B872}
 	EndGlobalSection
 EndGlobal
