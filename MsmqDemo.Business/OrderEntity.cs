@@ -18,18 +18,6 @@ namespace MsmqDemo.Business
         public DateTime DateCreated { get; set; }
 
         [ForeignKey("OrderId")]
-        public Collection<OrderItemEntities> OrderItems { get; set; } 
-    }
-
-    [Table("OrderItems")]
-    public class OrderItemEntities
-    {
-        public int Id { get; set; }
-
-        public int Quantity { get; set; }
-
-        public string ProductIdentifier { get; set; }
-
-        public OrderEntity Order { get; set; }
+        public Collection<OrderItemEntity> OrderItems { get; set; } 
     }
 }

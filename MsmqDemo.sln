@@ -15,6 +15,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Services", "MsmqDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Services.ConsoleHost", "MsmqDemo.Services.ConsoleHost\MsmqDemo.Services.ConsoleHost.csproj", "{E0D12BF7-C5E4-408A-A41D-4F33619F827A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsmqDemo.Business", "MsmqDemo.Business\MsmqDemo.Business.csproj", "{3A02B001-F043-4B44-AB86-C5EC8836434A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7114DAD8-114B-48E9-87B2-BCCF453CB0BC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +46,10 @@ Global
 		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0D12BF7-C5E4-408A-A41D-4F33619F827A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A02B001-F043-4B44-AB86-C5EC8836434A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A02B001-F043-4B44-AB86-C5EC8836434A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A02B001-F043-4B44-AB86-C5EC8836434A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A02B001-F043-4B44-AB86-C5EC8836434A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +59,6 @@ Global
 		{BC048BD2-7075-4B53-8CE7-28EF17312989} = {9E626520-28D3-4CAE-AD3B-A1911181B37F}
 		{14F60C40-2FE4-4347-8811-972239F17DBE} = {284574B1-3392-4671-9EB4-746C55F0B872}
 		{E0D12BF7-C5E4-408A-A41D-4F33619F827A} = {284574B1-3392-4671-9EB4-746C55F0B872}
+		{3A02B001-F043-4B44-AB86-C5EC8836434A} = {284574B1-3392-4671-9EB4-746C55F0B872}
 	EndGlobalSection
 EndGlobal
