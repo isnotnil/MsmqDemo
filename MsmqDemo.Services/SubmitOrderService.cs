@@ -1,4 +1,7 @@
-﻿using MsmqDemo.Services.Shared;
+﻿using System;
+using System.Collections.ObjectModel;
+using MsmqDemo.Business;
+using MsmqDemo.Services.Shared;
 
 namespace MsmqDemo.Services
 {
@@ -6,7 +9,31 @@ namespace MsmqDemo.Services
     {
         public void SubmitOrderRequest(OrderRequest request)
         {
-            throw new System.NotImplementedException();
+            using (var db = new OrderDataContext())
+            {
+                var order = new OrderEntity
+                                {
+                                    ConfirmationEmailAddress = request.ConfirmationEmailAddress,
+                                    DateCreated = DateTime.Now,
+                                    RequestedDeliveryDate = request.RequestedDeliveryDate,
+                                    VenderNumber = request.VenderNumber,
+                                    OrderItems = new Collection<OrderItemEntity>()
+                                };
+
+                foreach(var item in request.LineItems)
+                {
+                    var orderItem = new OrderItemEntity
+                                        {
+                                            ProductIdentifier = item.ProductIdentifier, 
+                                            Quantity = item.Quanity
+                                        };
+
+                    order.OrderItems.Add(orderItem);
+                }
+
+                db.Orders.Add(order);
+                db.SaveChanges();
+            }
         }
     }
 }
