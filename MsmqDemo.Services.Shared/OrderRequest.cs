@@ -13,7 +13,7 @@ namespace MsmqDemo.Services.Shared
         }
 
         [DataMember]
-        public string VenderNumber { get; set; }
+        public string VendorNumber { get; set; }
 
         [DataMember]
         public DateTime RequestedDeliveryDate { get; set; }

@@ -9,7 +9,7 @@ namespace MsmqDemo.Business
     {
         public int Id { get; set; }
 
-        public string VenderNumber { get; set; }
+        public string VendorNumber { get; set; }
 
         public DateTime RequestedDeliveryDate { get; set; }
 

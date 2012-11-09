@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/base/jquery-ui.css")"/>
+    <link rel="stylesheet" href="@Url.Content("~/Content/themes/base/jquery-ui.datepicker.css")"/>   
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-1.8.20.min.js")"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

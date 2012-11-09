@@ -1,0 +1,27 @@
+﻿@model MsmqDemo.Web.Models.Order
+
+@{
+    ViewBag.Title = "Request Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome to your source for awesome!</h2>
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel();
+    
+    <div>
+        <input type="submit" value="Submit Order"/>
+    </div>
+}
+
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            $("#RequestedDeliveryDate").datepicker();
+        });
+    </script>
+}

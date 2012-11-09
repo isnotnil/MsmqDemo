@@ -16,7 +16,7 @@ namespace MsmqDemo.Services
                                     ConfirmationEmailAddress = request.ConfirmationEmailAddress,
                                     DateCreated = DateTime.Now,
                                     RequestedDeliveryDate = request.RequestedDeliveryDate,
-                                    VenderNumber = request.VenderNumber,
+                                    VendorNumber = request.VendorNumber,
                                     OrderItems = new Collection<OrderItemEntity>()
                                 };
 
