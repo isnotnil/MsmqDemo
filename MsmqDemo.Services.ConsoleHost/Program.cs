@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
+using MsmqDemo.Services.Shared;
 
 namespace MsmqDemo.Services.ConsoleHost
 {
@@ -10,6 +11,11 @@ namespace MsmqDemo.Services.ConsoleHost
             try
             {
                 var serviceHost = new ServiceHost(typeof (SubmitOrderService));
+                serviceHost.AddServiceEndpoint(
+                    typeof (ISubmitOrderService),
+                    new MsmqDemoBinding(),
+                    @"net.msmq://localhost/private/DemoQueue"
+                    );
 
                 serviceHost.Open();
             }

@@ -12,5 +12,7 @@ namespace MsmqDemo.Business
         public string ProductIdentifier { get; set; }
 
         public OrderEntity Order { get; set; }
+
+        public int OrderId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Web.Mvc;
 using MsmqDemo.Services.Shared;
 using MsmqDemo.Web.Models;
@@ -64,7 +65,12 @@ namespace MsmqDemo.Web.Controllers
                 request.LineItems.Add(item);
             }
 
-            // TODO: Send to service
+            var channel = new ChannelFactory<ISubmitOrderService>(
+                new MsmqDemoBinding(),
+                @"net.msmq://localhost/private/DemoQueue");
+
+            var client = channel.CreateChannel();
+            client.SubmitOrderRequest(request);
         }
     }
 }
