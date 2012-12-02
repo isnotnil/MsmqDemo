@@ -5,13 +5,9 @@ using MsmqDemo.Business;
 using MsmqDemo.Services.Shared;
 
 namespace MsmqDemo.Services
-{
-    [ServiceBehavior(Name = "throttleIt", 
-        InstanceContextMode = InstanceContextMode.PerCall, 
-        ReleaseServiceInstanceOnTransactionComplete = true)]   
+{ 
     public class SubmitOrderService : ISubmitOrderService
     {
-        [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
         public void SubmitOrderRequest(OrderRequest request)
         {
             using (var db = new OrderDataContext())

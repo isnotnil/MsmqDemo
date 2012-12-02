@@ -6,7 +6,7 @@ namespace MsmqDemo.Services.Shared
         Namespace = "http://isnotnil.net/msmq_demo")]
     public interface ISubmitOrderService
     {
-        [OperationContract(IsOneWay = true)]
+        [OperationContract]
         void SubmitOrderRequest(OrderRequest request);
     }
 }

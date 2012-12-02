@@ -65,12 +65,7 @@ namespace MsmqDemo.Web.Controllers
                 request.LineItems.Add(item);
             }
 
-            var channel = new ChannelFactory<ISubmitOrderService>(
-                new MsmqDemoBinding(),
-                @"net.msmq://localhost/private/DemoQueue");
-
-            var client = channel.CreateChannel();
-            client.SubmitOrderRequest(request);
+            // TODO: Send to Service
         }
     }
 }

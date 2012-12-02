@@ -11,11 +11,8 @@ namespace MsmqDemo.Services.ConsoleHost
             try
             {
                 var serviceHost = new ServiceHost(typeof (SubmitOrderService));
-                serviceHost.AddServiceEndpoint(
-                    typeof (ISubmitOrderService),
-                    new MsmqDemoBinding(),
-                    @"net.msmq://localhost/private/DemoQueue"
-                    );
+                
+                // TODO: Add Service Endpoint
 
                 serviceHost.Open();
             }
