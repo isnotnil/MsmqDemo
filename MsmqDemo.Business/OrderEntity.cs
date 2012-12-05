@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MsmqDemo.Business
 {
-    [Table("Order")]
+    [Table("Orders")]
     public class OrderEntity
     {
         public int Id { get; set; }

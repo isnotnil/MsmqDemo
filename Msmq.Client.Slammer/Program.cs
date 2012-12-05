@@ -9,12 +9,14 @@ namespace Msmq.Client.Slammer
     {
         static void Main()
         {
-            Enumerable.Range(0, 100).AsParallel().ForAll(
+            const int numberOfMessages = 100000;
+
+            Enumerable.Range(0, numberOfMessages).AsParallel().ForAll(
                 (i) =>
                     {
                         var channel = new ChannelFactory<ISubmitOrderService>(
                             new MsmqDemoBinding(),
-                            "net.msmq://localhost/private/MsmqDemo/SubmitOrderService.svc"
+                            "net.msmq://localhost/private/DemoQueue"
                             );
                         var client = channel.CreateChannel();
                         var orderRequest = new OrderRequest

@@ -65,7 +65,12 @@ namespace MsmqDemo.Web.Controllers
                 request.LineItems.Add(item);
             }
 
-            // TODO: Send to Service
+            SendRequestToService(request);
+        }
+
+        private static void SendRequestToService(OrderRequest request)
+        {
+            throw new NotImplementedException();
         }
     }
 }
