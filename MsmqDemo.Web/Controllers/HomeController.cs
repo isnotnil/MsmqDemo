@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
+using System.ServiceModel.MsmqIntegration;
 using System.Web.Mvc;
 using MsmqDemo.Services.Shared;
 using MsmqDemo.Web.Models;
@@ -70,7 +71,13 @@ namespace MsmqDemo.Web.Controllers
 
         private static void SendRequestToService(OrderRequest request)
         {
-            throw new NotImplementedException();
+            var channelFactory = new ChannelFactory<ISubmitOrderService>(
+                new MsmqDemoBinding(),
+                 @"msmq.formatname:DIRECT=OS:localhost\private$\DemoQueue")
+            ;
+            var client = channelFactory.CreateChannel();
+
+            client.SubmitOrderRequest(new MsmqMessage<OrderRequest>(request));
         }
     }
 }

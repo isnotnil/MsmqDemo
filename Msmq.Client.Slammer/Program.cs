@@ -16,7 +16,7 @@ namespace Msmq.Client.Slammer
                     {
                         var channel = new ChannelFactory<ISubmitOrderService>(
                             new MsmqDemoBinding(),
-                            "net.msmq://localhost/private/DemoQueue"
+                            "net.msmq://localhost/private/MsmqDemo/SubmitOrderService.svc"
                             );
                         var client = channel.CreateChannel();
                         var orderRequest = new OrderRequest

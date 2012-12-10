@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ServiceModel;
+using System.ServiceModel.MsmqIntegration;
 using MsmqDemo.Business;
 using MsmqDemo.Services.Shared;
 
@@ -8,8 +9,12 @@ namespace MsmqDemo.Services
 { 
     public class SubmitOrderService : ISubmitOrderService
     {
-        public void SubmitOrderRequest(OrderRequest request)
+        [OperationBehavior(TransactionAutoComplete = true,
+                           TransactionScopeRequired = true)]
+        public void SubmitOrderRequest(MsmqMessage<OrderRequest> message)
         {
+            var request = message.Body;
+
             using (var db = new OrderDataContext())
             {
                 var order = new OrderEntity
